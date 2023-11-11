@@ -11,18 +11,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
     <title>Inicio</title>
+    <style>
+      header {
+        background: url(./pexels-ellie-burgin-19050718.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <!--Tamaño de la página usando grid = 12-->
-      <div class="row">
-        <div class="col s12 m3 blue">3</div>
-        <div class="col s12 m6 red">6</div>
-        <div class="col s12 m3 blue">3</div>
-      </div>
-    </div>
+    <header>
+      <nav class="nav-wrapper waves-effect waves-light green">
+        <div class="container">
+          <a href="#" class="brand-logo">Aprendiendo con Materialize</a>
+          <a href="#" class="sidenav-trigger" data-target="menu-responsive"><i class="material-icons">menu</i></a>
 
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="waves-effect waves-light green">Inicio</a></li>
+            <li><a href="registro.html" class="waves-effect waves-light green">Registro</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav waves-effect waves-light green center" id="menu-responsive">
+        <h3 class="white-text">Aprendiendo con Materialize</h3>
+        <li><a href="index.html" class="waves-effect waves-light white-text" id="">Inicio</a></li>
+        <li><a href="registro.html" class="waves-effect waves-light white-text" id="">Registro</a></li>
+      </ul>
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l5">
+            <p class="white-text">
+              Hace la mayor parte del trabajo pesado por nosotros y brinda un estilo que incorpora componentes
+              personalizados. Además, refinamos las animaciones y transiciones para brindar una experiencia más fluida a
+              los desarrolladores.
+            </p>
+            <a href="./registro.html" id="" class="waves-effect waves-light green white-text btn">REGÍSTRATE</a>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
+      });
+    </script>
   </body>
 </html>
